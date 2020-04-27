@@ -1,0 +1,9 @@
+module "mongodb" {
+  source          = "git::https://chandralekha882:Opcqa123!@github.com/chandralek/modules.git//mongodb"
+  VPC_ID          = data.terraform_remote_state.VPC.outputs.VPC_ID
+  MGMT_VPC_ID     = data.terraform_remote_state.VPC.outputs.MGMT_VPC_ID
+  PRIVATE_SUBNETS = data.terraform_remote_state.VPC.outputs.PRIVATE_SUBNETS
+  PUBLIC_SUBNETS  = data.terraform_remote_state.VPC.outputs.PUBLIC_SUBNETS
+  TAGS            = var.TAGS
+  INSTANCE_TYPE   = var.INSTANCE_TYPE
+}
