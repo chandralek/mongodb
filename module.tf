@@ -8,4 +8,8 @@ module "mongodb" {
   INSTANCE_TYPE   = var.INSTANCE_TYPE
   HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
   HOSTED_ZONE_NAME= data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
+  SSH_USR         = var.SSH_USR
+  SSH_PSW         = var.SSH_PSW
+  GIT_USR         = var.GIT_USR
+  GIT_PSW         = var.GIT_PSW
 }
