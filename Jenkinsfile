@@ -1,8 +1,11 @@
 pipeline{
-  agent any
+  agent {
+    label 'SLAVE'
+  }
 
-  parameters {
-    choice(name: 'ACTION', choices: ['', 'APPLY', 'DESTROY'], description: 'Pick something')
+  environment{
+    TF_VAR_SSH = credentials('SSH_ROOT')
+    TF_VAR_GIT = credentials('GitUserPass')
   }
 
   stages{

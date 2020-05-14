@@ -6,4 +6,6 @@ module "mongodb" {
   PUBLIC_SUBNETS  = data.terraform_remote_state.VPC.outputs.PUBLIC_SUBNETS
   TAGS            = var.TAGS
   INSTANCE_TYPE   = var.INSTANCE_TYPE
+  HOSTED_ZONE_ID  = data.terraform_remote_state.route53.outputs.HOSTED_ZONE_ID
+  HOSTED_ZONE_NAME= data.terraform_remote_state.route53.outputs.HOSTED_ZONE_NAME
 }

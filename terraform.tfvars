@@ -1,4 +1,5 @@
 INSTANCE_TYPE = "t2.micro"
 TAGS          = {
-  "ENV" = "nonprod"
+  "ENV" = "nonprod",
+  "PROJECT" = "roboshop"
 }
